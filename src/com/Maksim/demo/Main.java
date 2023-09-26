@@ -13,8 +13,8 @@ public class Main {
 // Variabler, använd for loop för fler spelare
         String player1;
         String player2;
-        int score;
-        int rounds = 3;
+        int score;  // nested for loop för antal tärningar
+        int rounds = 3;  // ersätt med scanner int input
         int sum = 0;
         int sum2 = 0;
 
