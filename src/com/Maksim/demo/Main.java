@@ -6,63 +6,38 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        //instantiate
-        Scanner sc = new Scanner(System.in);
-        Random random = new Random();
+       /* for (int i = 0; i < 5; i++) {
+            System.out.println("index i: " + i);
+            for (int j = 0; j < 10; j++) {
+                System.out.println("index j " + j);
 
-// Variabler, använd for loop för fler spelare
-        String player1;
-        String player2;
-        int score;  // nested for loop för antal tärningar
-        int rounds = 3;  // ersätt med scanner int input
-        int sum = 0;
-        int sum2 = 0;
+            }
+        }*/
 
-        //Player1
-        System.out.println("input player1 name: ");
-        player1 = sc.nextLine();
-        System.out.println("player 1 name is: "+ player1);
+        Scanner scanner = new Scanner(System.in);
 
-        //Player2
-        System.out.println("input player2 name: ");
-        player2 = sc.nextLine();
-        System.out.println("player 2 name is: " + player2);
+        int rounds = 5;
 
-        //Dice
+        System.out.println("hur många tärningar?");
+        int dice = scanner.nextInt();
+        System.out.println("you picked: " + dice);
 
-
-        // Random random = new Random();
-        //int score = random.nextInt(1,6);
-        //System.out.println(score);
-
-        //for (int i = 0; i < 1000; i++) {}
-           // score = random.nextInt(6)+1;
-           // System.out.println(score);
-
-        //player 1
-        System.out.println("player1 is throwing" + player1);
+        //rounds
         for (int i = 0; i < rounds; i++) {
+            System.out.println("round: " + i);
 
-            score = random.nextInt(6)+1;
-            System.out.println("poäng: " + score);
+            //dice
+            for (int j = 0; j < dice; j++) {
+                Random random = new Random ();
 
-            sum += score;
-            System.out.println("samlad poäng" + sum);
+                int score = random.nextInt(6)+1;
+
+                System.out.println("j is : " + j);
+
+            }
         }
 
-        // Player2
-        System.out.println(player2 + " throwing");
-
-        for (int i = 0; i < rounds; i++) {
-
-            score = random.nextInt(6)+1;
-            System.out.println("poäng: " + score);
-
-            sum2 += score;
-            System.out.println("samlad poäng" + sum2);
-        }
 
     }
-
 
 }
