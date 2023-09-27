@@ -68,7 +68,7 @@ public class Main {
 
 
                 for (int k = 0; k < dices; k++) {
-                    int dice = random.nextInt(1,6);
+                    int dice = random.nextInt(1,6);  // får aldrig mer än 5.. öka bound till 7 ?
                     System.out.println("dice " + (k+1) + " " + dice);
 
                     playerlist.get(j).score += dice;
@@ -79,6 +79,14 @@ public class Main {
 
 
             }
+
+
+
+        }
+
+        for (int i = 0; i < playerlist.size(); i++) {
+            System.out.println(playerlist.get(i).name);
+            System.out.println(playerlist.get(i).score);
 
         }
 
