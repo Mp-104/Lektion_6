@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f2e6fd8c-4eb0-487c-918f-dc00e22ff8f2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/Maksim/demo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Maksim/demo/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/com/Maksim/demo/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/Maksim/demo/Player.java" afterDir="false" />
@@ -57,6 +58,7 @@
       <updated>1695711835564</updated>
       <workItem from="1695711836500" duration="21320000" />
       <workItem from="1695903634928" duration="10707000" />
+      <workItem from="1696316411217" duration="17669000" />
     </task>
     <servers />
   </component>
