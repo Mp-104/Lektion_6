@@ -1,9 +1,6 @@
 package com.Maksim.demo;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -32,6 +29,9 @@ public class Main {
         System.out.println(players + " Spelare");
 
 
+        System.out.println(); // Radbrytning
+
+
         System.out.println("Hur många rundor? Ange ett heltal");
         while (!scanner.hasNextInt()) {
             System.out.println("Det är inte ett heltal!");
@@ -40,6 +40,7 @@ public class Main {
         int rounds = scanner.nextInt();
         System.out.println(rounds + " Rundor");
 
+        System.out.println(); // Radbrytning
 
         System.out.println("Hur många tärningar? Ange ett heltal!");
         while (!scanner.hasNextInt()) {
@@ -55,6 +56,8 @@ public class Main {
         player1.name = scanner.nextLine();
         System.out.println("Your name is: " + player1.name); */
 
+        System.out.println(); // Radbrytning
+
 
         for (int i = 0; i < players; i++) {
 
@@ -65,6 +68,10 @@ public class Main {
 
             System.out.println("Spelare " + (i+1) + ": " + player.name);
             playerlist.add(player);
+            System.out.println(); // Radbrytning
+            // System.out.println(player.score); //!!!!! TEST
+            // System.out.println(playerlist);
+
 
             // System.out.println("Playerlist " + playerlist);
 
@@ -74,17 +81,29 @@ public class Main {
 
 
         System.out.println("Medverkande spelare: ");
+        // System.out.println(playerlist);
+
+
         for (int i = 0; i < playerlist.size(); i++) {
 
             System.out.println(playerlist.get(i).name);
 
         }
 
+        System.out.println(); // Radbrytning
+        System.out.println("Tryck enter för att börja spelet");
+        scanner.nextLine();
+        System.out.println(); // radbrytning
+
         for (int i = 0; i < rounds; i++) {   // rounds är en variabel som spelare matar in med en int, loopen körs så många ggr
             System.out.println("Runda " + (i+1) );
+            System.out.println("Tryck enter för att fortsätta");
+            scanner.nextLine();
 
             for (int j = 0; j < playerlist.size(); j++) {
                 System.out.println(playerlist.get(j).name + "'s tur");
+                System.out.println("Tryck enter för att slå tärning");
+                scanner.nextLine();
 
 
                 for (int k = 0; k < dices; k++) {
@@ -96,6 +115,7 @@ public class Main {
 
                 }
                 System.out.println(playerlist.get(j).name + " har " + playerlist.get(j).score + " poäng!") ;
+                System.out.println(); // Radbrytning
 
 
 
@@ -124,29 +144,71 @@ public class Main {
             }
 
         } */
+        System.out.println("Tryck enter för en sammanställning av resultatet");
+        scanner.nextLine();
 
-
-
+        System.out.println(); // Radbrytning
         System.out.println("Slutresultatet: ");
-        Player winner = playerlist.get(0);
-        for (Player player : playerlist) {
+
+        // System.out.println("Before sorting? " + playerlist);
+        Collections.sort(playerlist , Collections.reverseOrder());
+        //System.out.println("After sorting? " + playerlist);
+
+        for (int i = 0; i < playerlist.size(); i++) {
+            System.out.println(playerlist.get(i).score + " poäng: " + playerlist.get(i).name);
+        }
+        if (playerlist.size() > 1) {
+            if (playerlist.get(0).score == playerlist.get(1).score) {
+                System.out.println(); // Radbrytning
+                System.out.println("Det blev oavgjort");
+
+            } else {
+                System.out.println(); // Radbrytning
+                System.out.println(playerlist.get(0).name + " Vann!");
+
+            }
+        }
+
+
+
+
+        //Player winner = playerlist.get(0);
+        /*for (Player player : playerlist) {
             System.out.println(player.name + " fick " + player.score + " poäng");
             if (player.score > winner.score) {
                 winner = player;
 
 
             }
+        } */
+        //System.out.println("Du vann, " + winner.name + "!");
 
 
 
-        }
-        System.out.println("Du vann, " + winner.name + "!");
+
+
+
+         //var temp = 0;
+         /* for (int i = 0; i < playerlist.size(); i++) {
+            System.out.println("playerlist.get(i).name: " + playerlist.get(i).name + " playerlist.get(i).score: " + playerlist.get(i).score);
+            System.out.println(playerlist.get(i).score);
+            System.out.println(playerlist);
+            System.out.println(players);
+
+
+            for (int j = i+1 ; j < playerlist.size(); j++) {
+                if (playerlist.get(i).score < playerlist.get(j).score); {
+                    temp = playerlist.get(i).score;
+                    playerlist.get(i).score = playerlist.get(j).score; // omfördelar score mellan spelaren, sorterar inte listan efter
+                    playerlist.get(j).score = temp;
 
 
 
 
+                }
+            }
+        } */
     }
-
 }
 /* Python code for sorting numbers, port to java
 
